@@ -44,7 +44,7 @@ const Navbar = () => {
           {/* RIGHT RESUME BUTTON */}
           <div className="flex justify-end">
             <a
-              href="/praveen ResAcc.pdf"
+              href="/praveen-resume.pdf"
               download
               className="px-5 py-2 rounded-xl text-sm font-medium
                          bg-green-500 text-black
