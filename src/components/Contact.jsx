@@ -1,6 +1,11 @@
 import { FaLocationDot, FaEnvelope, FaPhone } from "react-icons/fa6";
 
 const Contact = () => {
+  const handleMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty("--x", `${e.clientX - rect.left}px`);
+    e.currentTarget.style.setProperty("--y", `${e.clientY - rect.top}px`);
+  };
   return (
     <section id="contact" className="py-24 px-6 bg-black">
       <div className="max-w-6xl mx-auto text-center">
@@ -12,7 +17,9 @@ const Contact = () => {
         <div className="grid md:grid-cols-3 gap-8">
 
           {/* LOCATION */}
-          <div className="bg-black/40 backdrop-blur border border-green-500/20
+          <div
+            onMouseMove={handleMove}
+            className="glow-card bg-black/40 backdrop-blur border border-green-500/20
                           rounded-2xl p-8
                           hover:border-green-400
                           hover:shadow-[0_0_40px_rgba(34,197,94,0.25)]
@@ -27,7 +34,9 @@ const Contact = () => {
           </div>
 
           {/* EMAIL */}
-          <div className="bg-black/40 backdrop-blur border border-green-500/20
+          <div
+            onMouseMove={handleMove}
+            className="glow-card bg-black/40 backdrop-blur border border-green-500/20
                           rounded-2xl p-8
                           hover:border-green-400
                           hover:shadow-[0_0_40px_rgba(34,197,94,0.25)]
@@ -47,7 +56,9 @@ const Contact = () => {
           </div>
 
           {/* PHONE */}
-          <div className="bg-black/40 backdrop-blur border border-green-500/20
+          <div
+            onMouseMove={handleMove}
+            className="glow-card bg-black/40 backdrop-blur border border-green-500/20
                           rounded-2xl p-8
                           hover:border-green-400
                           hover:shadow-[0_0_40px_rgba(34,197,94,0.25)]
