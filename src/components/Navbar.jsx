@@ -13,7 +13,9 @@ const Navbar = () => {
           }
         });
       },
-      { threshold: 0.6 }
+      {
+        rootMargin: "-40% 0px -40% 0px"
+      }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -83,6 +85,16 @@ const Navbar = () => {
             }`}
           >
             Achievements
+          </a>
+          <a
+            href="#certificates"
+            className={`relative transition ${
+              active === "certificates"
+                ? "text-green-400 font-medium after:absolute after:-bottom-2 after:left-0 after:w-full after:h-[2px] after:bg-green-400 after:rounded-full"
+                : "hover:text-green-400 text-slate-300"
+            }`}
+          >
+            Certificates
           </a>
           <a
             href="#contact"
