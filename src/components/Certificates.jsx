@@ -119,7 +119,7 @@ const Certificates = () => {
             </p>
 
             <iframe
-              src={activeCert.file}
+              src={`https://docs.google.com/viewer?url=${encodeURIComponent(`https://my-port-folio-six-rust.vercel.app${activeCert.file}`)}&embedded=true`}
               className="w-full h-[60vh] rounded-xl border border-green-500/20"
               title={activeCert.title}
             />
