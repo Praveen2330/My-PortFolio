@@ -21,7 +21,7 @@ const certificates = [
     issuer: "Deloitte",
     year: "2026",
     skills: "Data Science . Tableau . Excel",
-    file: "/certificates/Deloitte certificate.pdf",
+    file: "/certificates/Deloitte-certificate.pdf",
   },
   {
     title: "Software Engineering Internship",
