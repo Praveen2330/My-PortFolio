@@ -17,11 +17,11 @@ const certificates = [
     file: "/certificates/iAspire certificate.pdf",
   },
   {
-    title: "Full-Stack Development",
-    issuer: "Coursera",
-    year: "2023",
-    skills: "React · Node.js · MongoDB",
-    file: "/certificates/fullstack.pdf",
+    title: "Data Analytics Job Simulation",
+    issuer: "Deloitte",
+    year: "2026",
+    skills: "Data Science . Tableau . Excel",
+    file: "/certificates/Deloitte certificate.pdf",
   },
   {
     title: "Software Engineering Internship",
