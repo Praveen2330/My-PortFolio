@@ -7,14 +7,14 @@ const certificates = [
     issuer: "IBM (Coursera)",
     year: "2024",
     skills: "Python · Data Science · AI · Development",
-    file: "/certificates/IBM (Coursera).jpg",
+    file: "/certificates/IBM-(Coursera).jpg",
   },
   {
     title: "Go for Gold – iAspire",
     issuer: "Accenture",
     year: "2025",
     skills: "Problem Solving · Technology Aptitude · Professional Skills",
-    file: "/certificates/iAspire certificate.jpg",
+    file: "/certificates/iAspire-certificate.jpg",
   },
   {
     title: "Data Analytics Job Simulation",
