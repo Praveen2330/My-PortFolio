@@ -10,31 +10,28 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center px-6 pt-32"
+      className="min-h-screen flex items-center px-5 pt-28 pb-16"
     >
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         {/* LEFT : TEXT + SOCIALS */}
-        <div>
-          {/* HEADLINE */}
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
+        <div className="order-2 lg:order-1 text-center lg:text-left">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
             I Turn{" "}
             <span className="text-slate-300 font-semibold">
-              “What If”
+              "What If"
             </span>{" "}
             into <br />
             <span className="text-green-400 drop-shadow-[0_0_20px_rgba(34,197,94,0.35)]">
-              “It Works”
+              "It Works"
             </span>
           </h1>
 
-          {/* SUB LINE */}
-          <p className="mt-6 text-slate-400 max-w-xl">
-            Software Engineering Intern (AI & ML) · Full-Stack Developer · SRM University
+          <p className="mt-5 text-slate-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base">
+            Software Engineering Intern (AI &amp; ML) · Full-Stack Developer · SRM University
           </p>
 
-          {/* SOCIAL ICONS */}
-          <div className="flex items-center gap-4 mt-8">
+          <div className="flex items-center gap-4 mt-8 justify-center lg:justify-start">
             <a
               href="https://www.linkedin.com/in/praveen-n-2330-pn"
               target="_blank"
@@ -58,21 +55,31 @@ const Hero = () => {
             >
               <FaGithub className="text-green-400 text-xl" />
             </a>
+
+            <a
+              href="/praveen-resume.pdf"
+              download
+              className="ml-2 px-5 py-2.5 rounded-xl text-sm font-medium
+                         bg-green-500 text-black hover:bg-green-400
+                         transition shadow-[0_0_25px_rgba(34,197,94,0.4)]"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
 
         {/* RIGHT : PROFILE CARD */}
         <div
           onMouseMove={handleMove}
-          className="glow-card bg-black/40 backdrop-blur
+          className="order-1 lg:order-2 glow-card bg-black/40 backdrop-blur
                      border border-green-500/20 rounded-3xl
-                     p-6 max-w-sm mx-auto"
+                     p-5 max-w-xs sm:max-w-sm mx-auto w-full"
         >
-          <div className="overflow-hidden rounded-2xl mb-6">
+          <div className="overflow-hidden rounded-2xl mb-5">
             <img
               src="/profile.jpg"
               alt="Praveen"
-              className="w-full h-80 object-cover"
+              className="w-full h-64 sm:h-80 object-cover"
             />
           </div>
 
@@ -80,8 +87,8 @@ const Hero = () => {
             Praveen N
           </h3>
 
-          <p className="text-slate-400 mt-1">
-            Software Engineering Intern (AI & ML)
+          <p className="text-slate-400 mt-1 text-sm">
+            Software Engineering Intern (AI &amp; ML)
           </p>
 
           <div className="flex flex-wrap gap-2 mt-4">

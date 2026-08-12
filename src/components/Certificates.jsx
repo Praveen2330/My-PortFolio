@@ -18,21 +18,33 @@ const certificates = [
   },
   {
     title: "Data Analytics Job Simulation",
-    issuer: "Deloitte",
+    issuer: "Forage",
     year: "2026",
-    skills: "Data Science · Tableau · Excel",
-    file: "/certificates/Deloitte-certificate.jpg",
+    skills: "Data Analytics · Excel · Data Visualisation",
+    file: "/certificates/Forage-Certificate.pdf",
   },
   {
-    title: "Software Engineering Internship",
-    issuer: "SRM University",
+    title: "MongoDB Certified Associate Developer",
+    issuer: "MongoDB University",
     year: "2024",
-    skills: "Full-Stack · AI/ML",
-    file: "/certificates/internship.pdf",
+    skills: "NoSQL · MongoDB · Database Design",
+    file: "/certificates/MangoDB-Certificate.pdf",
+  },
+  {
+    title: "SAP Certified - Data Analyst - SAP Analytics Cloud",
+    issuer: "SAP",
+    year: "2025",
+    skills: "ERP · SAP Modules · Enterprise Solutions",
+    file: "/certificates/SAP-Certificate.pdf",
+  },
+  {
+    title: "Business Intelligence",
+    issuer: "Infosys Springboard",
+    year: "2025",
+    skills: "BI Tools · Data Analysis · Reporting",
+    file: "/certificates/INFOSYS- Business Intelligence.pdf",
   },
 ];
-
-const futureCertificates = [1, 2, 3];
 
 const Certificates = () => {
   const [activeCert, setActiveCert] = useState(null);
@@ -47,13 +59,13 @@ const Certificates = () => {
 
   return (
     <>
-      <section id="certificates" className="py-24 px-6 bg-black">
+      <section id="certificates" className="py-20 px-5 bg-black">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
             My <span className="text-green-400">Certificates</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certificates.map((cert) => (
               <div
                 key={cert.title}
@@ -61,54 +73,55 @@ const Certificates = () => {
                 onClick={() => setActiveCert(cert)}
                 className="glow-card cursor-pointer bg-black/40 backdrop-blur
                            border border-green-500/20 rounded-2xl p-6
-                           hover:border-green-400 transition-all duration-300"
+                           hover:border-green-400 transition-all duration-300
+                           flex flex-col"
               >
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {cert.title}
-                </h3>
-                <p className="text-green-400 text-sm mb-1">
-                  {cert.issuer} · {cert.year}
-                </p>
-                <p className="text-slate-400 text-sm mb-4">{cert.skills}</p>
-                <span className="text-green-400 text-sm">Click to preview →</span>
-              </div>
-            ))}
-            {futureCertificates.map((i) => (
-              <div
-                key={`future-${i}`}
-                onMouseMove={handleMove}
-                className="glow-card bg-black/20 backdrop-blur
-                           border border-dashed border-green-500/30
-                           rounded-2xl p-6 flex flex-col items-center justify-center
-                           text-center text-slate-400
-                           hover:border-green-400 transition-all duration-300"
-              >
-                <span className="text-2xl mb-2">📜</span>
-                <p className="text-sm">New certificate coming soon</p>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-2 leading-snug">
+                    {cert.title}
+                  </h3>
+                  <p className="text-green-400 text-sm mb-1">
+                    {cert.issuer} · {cert.year}
+                  </p>
+                  <p className="text-slate-400 text-sm">{cert.skills}</p>
+                </div>
+                <span className="text-green-400 text-sm mt-5 inline-block">
+                  Tap to preview →
+                </span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* MODAL */}
       {activeCert && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-          <div className="bg-black/70 backdrop-blur border border-green-500/30
-                          rounded-3xl max-w-3xl w-full p-6 relative
-                          animate-[fadeIn_0.3s_ease-out]">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4"
+          onClick={() => setActiveCert(null)}
+        >
+          <div
+            className="bg-black/80 backdrop-blur border border-green-500/30
+                        rounded-3xl w-full max-w-3xl p-5 sm:p-6 relative
+                        animate-[fadeIn_0.3s_ease-out]"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setActiveCert(null)}
               className="absolute top-4 right-4 text-slate-400 hover:text-green-400 transition"
+              aria-label="Close"
             >
               <FaTimes size={20} />
             </button>
 
-            <h3 className="text-2xl font-bold text-white mb-1">{activeCert.title}</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 pr-8">
+              {activeCert.title}
+            </h3>
             <p className="text-green-400 text-sm mb-4">
               {activeCert.issuer} · {activeCert.year}
             </p>
 
-            <div className="w-full h-[60vh] rounded-xl border border-green-500/20 overflow-hidden bg-zinc-900 flex items-center justify-center">
+            <div className="w-full h-[50vh] sm:h-[60vh] rounded-xl border border-green-500/20 overflow-hidden bg-zinc-900 flex items-center justify-center">
               {isImage(activeCert.file) ? (
                 <img
                   src={activeCert.file}
@@ -124,13 +137,13 @@ const Certificates = () => {
               )}
             </div>
 
-            <div className="flex gap-4 mt-5">
+            <div className="flex flex-wrap gap-3 mt-5">
               <a
                 href={activeCert.file}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl
-                           bg-green-500 text-black hover:bg-green-400 transition"
+                           bg-green-500 text-black hover:bg-green-400 transition text-sm"
               >
                 <FaExternalLinkAlt />
                 Open in new tab
@@ -139,7 +152,7 @@ const Certificates = () => {
                 href={activeCert.file}
                 download
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl
-                           border border-green-500/40 text-green-400
+                           border border-green-500/40 text-green-400 text-sm
                            hover:border-green-400 hover:bg-green-500/10 transition"
               >
                 <FaDownload />
