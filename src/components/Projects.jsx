@@ -25,6 +25,19 @@ const projects = [
     website: "https://potential-fishing-zone.vercel.app",
   },
   {
+    title: "GoTurf – Smart Turf Booking System",
+    tech: "React · Node.js · Express.js · MongoDB · Socket.IO · JWT · TailwindCSS · Docker",
+    description:
+      "A full-stack sports turf booking platform with dynamic pricing, real-time team chat, slot management, and an admin analytics dashboard.",
+    bullets: [
+      "Built a full-stack platform with React 18 + Vite frontend and Node.js + Express.js REST API backend, secured with JWT authentication and bcryptjs password hashing.",
+      "Implemented real-time team chat and notifications using Socket.IO WebSockets; designed MongoDB schemas for Users, Turfs, Bookings, Teams, and Chat Messages.",
+      "Developed an admin analytics dashboard with Recharts visualizations for booking trends and revenue; containerized the application with Docker for seamless deployment.",
+    ],
+    github: "https://github.com/Praveen2330/Go-Turf",
+    website: "https://goturf.vercel.app",
+  },
+  {
     title: "Driver Drowsiness Detection",
     tech: "Python · MediaPipe · OpenCV · Computer Vision",
     description:
@@ -47,7 +60,7 @@ const projects = [
   },
 ];
 
-const futureProjects = [1];
+const futureProjects = [];
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
