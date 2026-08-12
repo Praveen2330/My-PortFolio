@@ -21,8 +21,8 @@ const projects = [
       "Designed a ConvLSTM-based spatiotemporal model capturing temporal ocean dynamics; built U-Net CNN segmentation pipeline for precise fishing zone boundary detection.",
       "Created interactive visualization dashboard with color-coded fishing zone maps and GPS coordinates — demonstrating ₹7–10 lakhs potential annual savings per vessel.",
     ],
-    github: "",
-    website: "",
+    github: "https://github.com/Praveen2330/AI-Based-Geospatial-Decision-Support-System-for-Optimal-Fishing-Zone-Identification",
+    website: "https://potential-fishing-zone.vercel.app",
   },
   {
     title: "Driver Drowsiness Detection",
