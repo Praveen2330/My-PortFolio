@@ -28,7 +28,7 @@ const Hero = () => {
           </h1>
 
           <p className="mt-5 text-slate-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base">
-            SDE · SIML · Data Analytics · Full-Stack Developer · SRM University
+            Software Developer· (AI&ML)· Data Analytics · Full-Stack Developer · SRM University
           </p>
 
           <div className="flex items-center gap-4 mt-8 justify-center lg:justify-start">
