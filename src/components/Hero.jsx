@@ -28,7 +28,8 @@ const Hero = () => {
           </h1>
 
           <p className="mt-5 text-slate-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base">
-            Software Developer· (AI&ML)· Data Analytics · Full-Stack Developer · SRM University
+            Software Developer· (AI&ML)· Data Analytics · Full-Stack Developer ·
+            SRM University
           </p>
 
           <div className="flex items-center gap-4 mt-8 justify-center lg:justify-start">
@@ -88,15 +89,15 @@ const Hero = () => {
           </h3>
 
           <p className="text-slate-400 mt-1 text-sm">
-            SDE · SIML · Data Analytics
+            Software Developer · (AI&amp;ML) · Data Analytics
           </p>
 
           <div className="flex flex-wrap gap-2 mt-4">
             <span className="px-3 py-1 text-sm rounded-full bg-green-500/10 text-green-300">
-              SDE
+              Software Developer
             </span>
             <span className="px-3 py-1 text-sm rounded-full bg-green-500/10 text-green-300">
-              SIML
+              AI &amp; ML
             </span>
             <span className="px-3 py-1 text-sm rounded-full bg-green-500/10 text-green-300">
               Data Analytics
