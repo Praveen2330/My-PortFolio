@@ -3,16 +3,16 @@ import { FaExternalLinkAlt, FaDownload, FaTimes, FaBriefcase } from "react-icons
 
 const experiences = [
   {
-    role: "Software Engineering Intern",
-    domain: "AI & ML",
-    company: "Live Project",
-    duration: "2025",
-    type: "Full-time Internship",
+    role: "UI Design Intern",
+    domain: "UI Designs",
+    company: "Titan Company Limited",
+    duration: "Jun 2025 – Jul 2025",
+    type: "Live Project Internship",
     description:
-      "Completed a live project internship focused on AI & ML-driven software engineering. Worked on real-world problems involving full-stack development and machine learning integration, gaining hands-on industry experience.",
-    skills: ["Python", "Machine Learning", "Full-Stack", "AI", "React", "Node.js"],
+      "Completed a Live Project on the topic \"UI-Designs\" at Titan Company Limited under the Systems Department, guided by Mr. Madhu M C. Demonstrated sincerity, hard work, and keen interest throughout the internship project.",
+    skills: ["UI Design", "Systems Department", "Figma", "User Experience", "Prototyping"],
     certificate: "/Praveen.N Live Project Completion Letter (1).pdf",
-    certificateLabel: "Live Project Completion Letter",
+    certificateLabel: "Live Project Completion Letter – Titan Company",
   },
 ];
 
