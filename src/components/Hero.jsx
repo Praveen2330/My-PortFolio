@@ -78,7 +78,7 @@ const Hero = () => {
         >
           <div className="overflow-hidden rounded-2xl mb-5">
             <img
-              src="/profile.jpg"
+              src="/profile.jpeg"
               alt="Praveen"
               className="w-full h-64 sm:h-80 object-cover"
             />
